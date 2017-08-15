@@ -1,6 +1,25 @@
 (function($){
   $(function(){
+    
+    /*
+     *  The Konami Code
+     */
+    var kkeys = [], konami = "38,38,40,40,37,39,37,39,66,65";
+    $(document).keydown(function(e) {
+      kkeys.push( e.keyCode );
+      if ( kkeys.toString().indexOf( konami ) >= 0 ) {
+            $(document).unbind('keydown',arguments.callee);
+            var audioElement = document.createElement('audio');
+            audioElement.setAttribute('src', 'http://66.90.93.122/ost/contra-ost-nes-1988-/kfrsmzccqe/01-title.mp3');
+            audioElement.setAttribute('autoplay', 'autoplay');
+            $.get();
+            audioElement.addEventListener("load", function() {
+                audioElement.play();
+            }, true);
 
+        //$("body").addClass("konami");
+      }
+    });
     var window_width = $(window).width();
 
     // convert rgb to hex value string
