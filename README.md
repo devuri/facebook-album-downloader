@@ -10,6 +10,7 @@ The whole **documentation of the code will be available soon**.
  - Move Facebook Photo Albums to Google Drive
  - Watch Facebook Photo Albums in a slideshow.
  - The photo albums downloaded at the server deletes immiditely from he server after the user complete the download.
+ - Easter egg : Try the Konami Code in slideshow ;)
 
 ## Features for Developers
 - Easily Customizable.
