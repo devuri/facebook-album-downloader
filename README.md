@@ -5,12 +5,12 @@
 This application is **easily customizable** to **integrate with your application** just by using the namespace and libraries and helper classes.
 The whole **documentation of the code will be available soon**.
 
-#### Features for Users
+## Features for Users
  - Download Facebook Photo Albums locally on your computer.
  - Move Facebook Photo Albums to Google Drive
  - Watch Facebook Photo Albums in a slideshow.
  - The photo albums downloaded at the server deletes immiditely from he server after the user complete the download.
- - Easter egg : Try the Konami Code in slideshow ;)
+ - **Easter Egg** : Try the Konami Code in slideshow :wink:
 
 ## Features for Developers
 - Easily Customizable.
@@ -30,3 +30,5 @@ This application stores the photos of the users on the server side for very litt
 
 ##### Note:
 Any person can copy this code without any restriction, including copy, modify, merge, publish, distribute, commercially use.
+
+Made with :heart: in India.
