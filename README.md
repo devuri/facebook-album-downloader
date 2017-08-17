@@ -21,6 +21,13 @@ The whole **documentation of the code will be available soon**.
 - Photos are uploaded on <i class="icon-provider-gdrive" />Google Drive in folder 'facebook_<user_name>_album' folder.
 - At the time of uploading photos at <i class="icon-provider-gdrive" />Google Drive the photos which are already available at drive are skipped. So the repatition is reduced and process of uploading photos became faster.
 
+## Todos :
+- Clean URLs
+```uri
+Eg. http://example.com/album/101451484113
+```
+
+
 ### Library Used:
 Materialize CSS for Designing - http://materializecss.com/
 
