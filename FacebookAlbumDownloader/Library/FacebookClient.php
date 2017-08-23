@@ -119,8 +119,19 @@ class FacebookClient
     public function getAlbum($albumId)
     {
         try {
-            $response = $this->fb->get('/'.$albumId.'?fields=name,photos{images,name,created_time}');
-            return $response->getGraphNode()->asArray();
+            $response = $this->fb->get('/'.$albumId.'?fields=name,photos.limit(100){images,name,created_time}');
+            $edge = $response->getGraphNode();
+            $album = $edge->asArray();
+            $edge = $response->getGraphNode()['photos'];
+            $photos = array();
+            
+            do{
+                $photos = array_merge($photos,$edge->asArray());
+                $edge = $this->fb->next($edge);
+            }while($edge !== NULL);
+            
+            $album['photos'] = $photos;
+            return $album;
         } catch (Facebook\Exceptions\FacebookResponseException $e) {
             echo 'Graph returned an error: ' . $e->getMessage();
             exit;
@@ -130,6 +141,7 @@ class FacebookClient
         }
         return false;
     }
+
 
     public function getUsername($profileID)
     {
